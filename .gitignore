@@ -1,0 +1,8 @@
+*.pth
+data/
+rerun/model/
+bank-full.csv
+*.csv.gz
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
