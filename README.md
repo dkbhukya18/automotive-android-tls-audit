@@ -3,7 +3,7 @@
 Course project for CIS 546, University of Michigan-Dearborn, Winter 2023.
 Team: Dileep Kumar Bhukya, Deepa Akkala.
 
-This is a **corrected** write-up of the original report. [ERRATA.md](ERRATA.md) lists every change.
+[ERRATA.md](ERRATA.md) notes where these results differ from the original course report.
 
 ## What the project does
 
@@ -24,7 +24,7 @@ The analysis is static only. No traffic was intercepted, so the findings are con
 
 ## How to read NSC findings
 
-Several of these points were misinterpreted in the original report.
+Several of these points are easy to misread.
 
 - **No NSC file ≠ insecure.** Apps targeting API 24 or later don't trust user-installed CAs by default. Apps targeting API 28 or later also block cleartext by default. Without the app's `targetSdkVersion` (inside the APK), a missing NSC file tells you nothing on its own.
 - **`<debug-overrides>` only applies to debuggable builds** (`android:debuggable="true"`). Store releases are not debuggable, so trusting user CAs *inside* debug-overrides is **not** a production weakness. Trusting user CAs in `<base-config>` or `<domain-config>` is.
