@@ -3,8 +3,6 @@
 Course project for CIS 546, University of Michigan-Dearborn, Winter 2023.
 Team: Dileep Kumar Bhukya, Deepa Akkala.
 
-[ERRATA.md](ERRATA.md) notes where these results differ from the original course report.
-
 ## What the project does
 
 Connected-car apps handle location, vehicle control and personal data. This project statically audited how 20 popular automotive Android apps configure TLS, using Android's **Network Security Configuration (NSC)**. NSC is an XML file that controls:
@@ -47,7 +45,7 @@ Several of these points are easy to misread.
 
 ## Limitations and next steps
 
-- The results are a 2023 snapshot of the app versions listed in the original tables, and current versions may differ.
+- The results are a 2023 snapshot of the app versions tested, and current versions may differ.
 - `targetSdkVersion`, `usesCleartextTraffic`, and any certificate pinning done in code (for example OkHttp's `CertificatePinner`) were not checked. NSC is not the only place an app can configure TLS.
 - **Next step:** dynamic validation. Install a user CA, proxy traffic through Burp Suite, and test whether the high-risk apps actually accept the interception. Frida can show whether any pinning happens in code.
 
